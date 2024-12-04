@@ -1,3 +1,5 @@
+package main;
+
 public enum Job {
   PALADIN,
   GUERRIER,

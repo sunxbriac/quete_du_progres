@@ -1,3 +1,5 @@
+package main;
+
 public class SingletonHero {
   private SingletonHero instance;
   private int strength;

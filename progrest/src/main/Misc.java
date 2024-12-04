@@ -1,6 +1,9 @@
+package main;
+
 import java.util.List;
 
-public class MerchantEncounter implements Event{
+public class Misc implements Event{
+
     @Override
     public void resolveEvent() {
 

@@ -1,7 +1,8 @@
+package main;
+
 import java.util.List;
 
-public class Misc implements Event{
-
+public class Fight implements Event{
     @Override
     public void resolveEvent() {
 

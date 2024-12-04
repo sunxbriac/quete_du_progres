@@ -1,3 +1,5 @@
+package main;
+
 public class SingletonStory {
     private SingletonStory instance;
     private int act_number;
