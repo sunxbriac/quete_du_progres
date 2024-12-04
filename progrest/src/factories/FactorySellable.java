@@ -3,7 +3,7 @@ package factories;
 import main.Sellable;
 
 public class FactorySellable {
-    public Sellable getSellable(){
+    public Sellable generateSellable(){
         return null;
     }
 }

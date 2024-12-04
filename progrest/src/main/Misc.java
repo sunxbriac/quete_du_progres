@@ -14,8 +14,5 @@ public class Misc implements Event{
 
     }
 
-    @Override
-    public String generate(List<String> strings) {
-        return "";
-    }
+
 }

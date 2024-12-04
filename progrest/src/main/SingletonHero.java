@@ -14,7 +14,7 @@ public class SingletonHero {
 
   private SingletonHero()
   {
-    
+
   }
 
   public SingletonHero getInstance()

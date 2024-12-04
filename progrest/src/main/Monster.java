@@ -2,10 +2,13 @@ package main;
 
 import java.util.List;
 
-public class Monster implements Generable{
+public class Monster{
     private String nom;
-    @Override
-    public String generate(List<String> strings) {
-        return "";
+    private String location;
+
+    public Monster(String name, String location){
+        nom=name;
+        this.location=location;
     }
+
 }
