@@ -1,25 +1,32 @@
 package main;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class SingletonHero {
-  private SingletonHero instance;
-  private int strength;
-  private int intelligence;
-  private int will;
-  private int charisma;
+  static private SingletonHero instance;
   private int level;
+  private int[] attributes;
   private Inventory inventory;
   private ArrayList<Buff> buffs;
+  private Job job;
 
+  
   private SingletonHero()
   {
-    
+    Random rand = new Random();
+    attributes = new int[6];
+    for (int i = 0; i < 6; i++) {
+      int var = rand.nextInt(13) - 6;
+      attributes[i] = rand.nextInt(12) + var;
+    }
   }
 
-  public SingletonHero getInstance()
+  static public SingletonHero getInstance()
   {
-    
+    if(instance == null)
+      instance = new SingletonHero();
+    return instance;  
   }
 
   public void levelUp()
@@ -39,6 +46,11 @@ public class SingletonHero {
 
   public String getSpell()
   {
+    return inventory.getSpell().getName();
+  }
 
+  public Inventory getInventory()
+  {
+    return inventory;
   }
 }
