@@ -1,6 +1,6 @@
 package main;
 
-public interface Event extends Generable {
+public interface Event {
     void resolveEvent();
     void printMessage();
 }
