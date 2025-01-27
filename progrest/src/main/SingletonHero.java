@@ -36,7 +36,13 @@ public class SingletonHero {
 
   public void updateBuffs()
   {
-
+    ArrayList<Buff> to_remove = new ArrayList<>();
+    for(Buff b : buffs){
+      if(b.changeDuration()){
+        to_remove.add(b);
+      }
+    }
+    buffs.removeAll(to_remove);
   }
 
   public void useConsommable()
@@ -52,5 +58,9 @@ public class SingletonHero {
   public Inventory getInventory()
   {
     return inventory;
+  }
+
+  public boolean isJob(Job j){
+    return j==job;
   }
 }

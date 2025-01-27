@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Act {
-    private int number_of_events;
     private int act_id;
     private ArrayList<Event> events;
 
