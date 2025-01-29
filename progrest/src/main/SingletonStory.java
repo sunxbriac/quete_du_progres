@@ -12,11 +12,19 @@ public class SingletonStory {
     }
 
     private SingletonStory(){
-        act_number = 1;
+        act_number = 0;
     }
 
     public void changeAct(){
         act_number++;
         act = new Act(act_number);
+        System.out.println("Act : " + act_number);
+    }
+
+    public void play(){
+        while(true) {
+            act.solveEvents();
+            changeAct();
+        }
     }
 }
