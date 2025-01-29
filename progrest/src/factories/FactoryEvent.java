@@ -17,7 +17,7 @@ public class FactoryEvent {
                 result = new MerchantEncounter(Reader.getStringMerchant(), Reader.getStringLocation());
                 break;
             case 1:
-                result = new Misc();
+                result = new Misc(Reader.getStringRandomEvent());
                 break;
             default:
                 result = new Fight(calculateNumberOfMonsters(act_id));

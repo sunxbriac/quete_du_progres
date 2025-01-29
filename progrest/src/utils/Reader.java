@@ -7,18 +7,22 @@ import java.util.Random;
 public abstract class Reader {
     private static final String merchants_file = "merchants.txt";
     private static final String monsters_file = "monsters.txt";
-    private static final String location_file = "locations.txt";
+    private static final String locations_file = "locations.txt";
+    private static final String equipements_file = "equipements.txt";
+    private static final String consommables_file = "consommables.txt";
+    private static final String spells_file = "spells.txt";
+    private static final String events_file = "events.txt";
 
     public static String getStringEquipement() {
-        return null;
+        return getLineInFile(equipements_file);
     };
 
     public static String getStringConsommable(){
-        return null;
+        return getLineInFile(consommables_file);
     }
 
     public static String getStringSpell(){
-        return null;
+        return getLineInFile(spells_file);
     }
 
     public static String getStringMerchant(){
@@ -26,7 +30,7 @@ public abstract class Reader {
     }
 
     public static String getStringLocation(){
-        return getLineInFile(location_file);
+        return getLineInFile(locations_file);
     }
 
     public static String getStringMonsterName(){
@@ -34,7 +38,7 @@ public abstract class Reader {
     }
 
     public static String getStringRandomEvent(){
-        return null;
+        return getLineInFile(events_file);
     }
 
     public static String getLineInFile(String file_input){
