@@ -31,7 +31,7 @@ public class SingletonHero {
 
   public void levelUp()
   {
-
+    level++;
   }
 
   public void updateBuffs()
