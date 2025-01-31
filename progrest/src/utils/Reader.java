@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.util.Random;
 
 public abstract class Reader {
-    private static final String directory = "";
+    private static final String directory = "files/";
 
     private static final String merchants_file = directory+"merchants.txt";
     private static final String monsters_file = directory+"monsters.txt";
@@ -14,6 +14,7 @@ public abstract class Reader {
     private static final String consommables_file = directory+"consommables.txt";
     private static final String spells_file = directory+"spells.txt";
     private static final String events_file = directory+"events.txt";
+    private static final String synonyms_file = directory+"killing_synonyms.txt";
 
     public static String getStringEquipement() {
         return getLineInFile(equipements_file);
@@ -43,6 +44,8 @@ public abstract class Reader {
         return getLineInFile(events_file);
     }
 
+    public static String getStringSynonym(){ return getLineInFile(synonyms_file); }
+
     public static String getLineInFile(String file_input){
         String randomLine = null;
         int lineCount = 0;
@@ -61,7 +64,6 @@ public abstract class Reader {
             e.printStackTrace();
         }
 
-        // If no lines were found, the file is empty
         if (lineCount == 0) {
             throw new IllegalArgumentException("The file is empty.");
         }

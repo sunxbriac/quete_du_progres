@@ -20,6 +20,11 @@ public class SingletonHero {
       int var = rand.nextInt(13) - 6;
       attributes[i] = rand.nextInt(12) + var;
     }
+
+    inventory = new Inventory();
+    level=1;
+    buffs = new ArrayList<>();
+    job = Job.PALADIN; //TODO
   }
 
   public static SingletonHero getInstance()
@@ -38,10 +43,12 @@ public class SingletonHero {
   public void levelUp()
   {
     level++;
+    //TODO
   }
 
   public void updateBuffs()
   {
+    //TODO change stats accordingly
     ArrayList<Buff> to_remove = new ArrayList<>();
     for(Buff b : buffs){
       if(b.changeDuration()){
@@ -53,7 +60,7 @@ public class SingletonHero {
 
   public void useConsommable()
   {
-
+    //TODO
   }
 
   public String getSpell()

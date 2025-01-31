@@ -1,30 +1,30 @@
-Roger the Seller  
-Bertrand the Merchant  
-Gustav the Trader  
-Felix the Peddler  
-Edgar the Shopkeeper  
-Margot the Alchemist  
-Lucien the Blacksmith  
-Isolde the Enchantress  
-Barnaby the Fence  
-Rupert the Wandering Vendor  
-Gertrude the Potion Brewer  
-Theodore the Relic Collector  
-Oswald the Armorer  
-Sylvia the Gem Dealer  
-Benedict the Scrollkeeper  
-Hugo the Caravan Master  
-Mathilda the Weaver  
-Vincent the Exotic Goods Dealer  
-Helga the Spice Trader  
-Alaric the Tinker  
-Cedric the Beast Tamer  
-Eleanor the Jewelcrafter  
-Horace the Antiquarian  
-Daphne the Herbalist  
-Sigmund the Coinmaster  
-Clara the Fortune Seller  
-Reginald the Auctioneer  
-Ursula the Clothier  
-Wilfred the Rune Scribe  
-Eustace the Smuggler  
+Roger the Seller
+Bertrand the Merchant
+Gustav the Trader
+Felix the Peddler
+Edgar the Shopkeeper
+Margot the Alchemist
+Lucien the Blacksmith
+Isolde the Enchantress
+Barnaby the Fence
+Rupert the Wandering Vendor
+Gertrude the Potion Brewer
+Theodore the Relic Collector
+Oswald the Armorer
+Sylvia the Gem Dealer
+Benedict the Scrollkeeper
+Hugo the Caravan Master
+Mathilda the Weaver
+Vincent the Exotic Goods Dealer
+Helga the Spice Trader
+Alaric the Tinker
+Cedric the Beast Tamer
+Eleanor the Jewelcrafter
+Horace the Antiquarian
+Daphne the Herbalist
+Sigmund the Coinmaster
+Clara the Fortune Seller
+Reginald the Auctioneer
+Ursula the Clothier
+Wilfred the Rune Scribe
+Eustace the Smuggler

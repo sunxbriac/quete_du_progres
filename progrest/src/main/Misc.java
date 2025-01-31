@@ -1,6 +1,9 @@
 package main;
 
+import utils.Printer;
+
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Misc implements Event{
 
@@ -17,7 +20,7 @@ public class Misc implements Event{
 
     @Override
     public void printMessage() {
-        System.out.println(what);
+        Printer.slow_print(what, ThreadLocalRandom.current().nextInt(2, 6));
     }
 
 

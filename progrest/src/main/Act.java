@@ -12,7 +12,7 @@ public class Act {
 
     public Act(int act_id){
         this.act_id = act_id;
-        events = new ArrayList<Event>();
+        events = new ArrayList<>();
 
         int number_of_events = ThreadLocalRandom.current().nextInt(act_id, act_id + 4);
         FactoryEvent fe = new FactoryEvent();
@@ -20,6 +20,7 @@ public class Act {
         for(int i=0; i!=number_of_events; i++){
             events.add(fe.generateEvent(act_id));
         }
+
     }
 
     public void solveEvents(){
@@ -27,9 +28,8 @@ public class Act {
 
         for(Event e : events){
             e.resolveEvent();
-            e.printMessage();
         }
 
-        System.out.println("End of Act " + act_id);
+        Printer.slow_print("End of Act " + act_id,1);
     }
 }

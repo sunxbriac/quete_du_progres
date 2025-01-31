@@ -4,11 +4,18 @@ import java.util.List;
 
 public class Monster{
     private String nom;
-    private String location;
+    private String how_to_kill;
 
-    public Monster(String name, String location){
+    public Monster(String name, String how_to_kill){
         nom=name;
-        this.location=location;
+        this.how_to_kill=how_to_kill;
     }
 
+    public String getNom() {
+        return nom;
+    }
+
+    public String getHow_to_kill() {
+        return how_to_kill;
+    }
 }

@@ -1,30 +1,30 @@
-Forgotten Crypt  
-Cursed Forest  
-Abyssal Cavern  
-Dragon's Lair  
-Haunted Castle  
-Goblin Warrens  
-Sunken Ruins  
-Echoing Catacombs  
-Doomspire Keep  
-Twilight Marsh  
-Volcanic Chasm  
-Crystal Spire  
-Shadowfang Tower  
-The Eternal Maze  
-Obsidian Fortress  
-Frozen Wastes  
-Titan’s Graveyard  
-Serpent’s Hollow  
-Lost City of Zaldor  
-The Howling Abyss  
-Bloodstained Battlefield  
-Fungal Grotto  
-Drowned Catacombs  
-Celestial Observatory  
-The Infernal Pit  
-Skyborne Citadel  
-Forsaken Monastery  
-Shattered Realm  
-Lich King's Throne  
-Witchwood Grove  
+Forgotten Crypt
+Cursed Forest
+Abyssal Cavern
+Dragon's Lair
+Haunted Castle
+Goblin Warrens
+Sunken Ruins
+Echoing Catacombs
+Doomspire Keep
+Twilight Marsh
+Volcanic Chasm
+Crystal Spire
+Shadowfang Tower
+The Eternal Maze
+Obsidian Fortress
+Frozen Wastes
+Titan’s Graveyard
+Serpent’s Hollow
+Lost City of Zaldor
+The Howling Abyss
+Bloodstained Battlefield
+Fungal Grotto
+Drowned Catacombs
+Celestial Observatory
+The Infernal Pit
+Skyborne Citadel
+Forsaken Monastery
+Shattered Realm
+Lich King's Throne
+Witchwood Grove

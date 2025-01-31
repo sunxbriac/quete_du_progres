@@ -6,8 +6,18 @@ import java.util.Random;
 public class Inventory {
   private int gold;
   private ArrayList<ArrayList<Sellable>> sellables;
-  public void sellItems()
+
+  public Inventory(){
+    sellables = new ArrayList<>();
+    sellables.add(new ArrayList<>()); //spells
+    sellables.add(new ArrayList<>()); //equipements
+    sellables.add(new ArrayList<>()); //consommables
+  }
+
+  public int sellItems()
   {
+    int money_won = 0;
+
     SingletonHero hero = SingletonHero.getInstance();
     ArrayList<Sellable> to_remove = new ArrayList<>();
     ArrayList<Sellable> current_list = sellables.get(0);
@@ -16,6 +26,7 @@ public class Inventory {
     for(Sellable s : current_list){
       Spell sp = (Spell) s;
       if(!hero.isJob(sp.getClass_restriction())){
+        money_won += sp.value;
         sellItem(sp);
         to_remove.add(sp);
       }
@@ -28,6 +39,7 @@ public class Inventory {
     for(Sellable s : current_list){
       Equipement eq = (Equipement) s;
       if(!hero.isJob(eq.getClass_restriction())){
+        money_won += eq.value;
         sellItem(eq);
         to_remove.add(eq);
       }
@@ -35,7 +47,8 @@ public class Inventory {
     current_list.removeAll(to_remove);
     to_remove.clear();
 
-    //consommable are not sold for the moment
+    //TODO consommable are not sold for the moment
+    return money_won;
   }
 
 

@@ -20,7 +20,7 @@ public class FactoryEvent {
                 result = new Misc(Reader.getStringRandomEvent());
                 break;
             default:
-                result = new Fight(calculateNumberOfMonsters(act_id));
+                result = new Fight(calculateNumberOfMonsters(act_id), Reader.getStringLocation());
                 break;
         };
 
@@ -28,6 +28,6 @@ public class FactoryEvent {
     }
 
     private int calculateNumberOfMonsters(int act_id){
-        return act_id/5+1;
+        return act_id/5 + 1 + ThreadLocalRandom.current().nextInt(0, 3);
     }
 }
