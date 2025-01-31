@@ -14,13 +14,13 @@ public class FactorySellable {
 
         switch(ThreadLocalRandom.current().nextInt(0, 5)){
             case 0:
-                result = generateConsumable(value);
+                result = generateConsumable(act_id, value);
                 break;
             case 1:
                 result = generateSpell(value);
                 break;
             default:
-                result = generateEquipment(value);
+                result = generateEquipment(act_id, value);
                 break;
         }
 
@@ -34,10 +34,10 @@ public class FactorySellable {
         return baseValue + randomFactor;
     }
 
-    public Equipment generateEquipment(int val){
-        int stat_id = 0; //TODO
+    public Equipment generateEquipment(int act_id, int val){
+        int stat_id = getRandomStatId();
         Job class_rest = getRandomJob();
-        int bonus = 1; //TODO
+        int bonus = 1; //TODO change scaling depending on act_id
         return new Equipment(stat_id, class_rest, bonus, Reader.getStringEquipment(), val);
     }
 
@@ -46,10 +46,10 @@ public class FactorySellable {
         return new Spell(class_rest, Reader.getStringSpell(), val);
     }
 
-    public Consumable generateConsumable(int val){
-        int stat_id = 0; //TODO
-        int number_of_use = 1; //TODO
-        int bonus = 1; //TODO
+    public Consumable generateConsumable(int act_id, int val){
+        int stat_id = getRandomStatId();
+        int number_of_use = (int) (Math.random() * 5) + 1;
+        int bonus = 1; //TODO change scaling depending on act_id
         return new Consumable(stat_id, number_of_use, bonus, Reader.getStringConsumable(), val);
     }
 
@@ -57,5 +57,10 @@ public class FactorySellable {
         Random random = new Random();
         Job[] jobs = Job.values(); // Get all the enum values
         return jobs[random.nextInt(jobs.length)]; // Return a random job
+    }
+
+    private static int getRandomStatId() {
+        Random random = new Random();
+        return random.nextInt(TypeAttribute.values().length);
     }
 }

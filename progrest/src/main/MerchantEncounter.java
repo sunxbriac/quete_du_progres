@@ -18,7 +18,7 @@ public class MerchantEncounter implements Event{
         SingletonHero hero = SingletonHero.getInstance();
         int money_gained = hero.getInventory().sellItems();
         Printer.slow_print("Sold items for " + money_gained + " gold", 3);
-        //TODO buy some random items depending of gold
+        //TODO buy some random items depending of gold and class restriction
     }
 
     @Override

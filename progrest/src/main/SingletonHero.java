@@ -53,7 +53,7 @@ public class SingletonHero {
   public void levelUp()
   {
     level++;
-    //TODO
+    //TODO change stats, add call at the end of fight event ?
   }
 
   public void updateBuffs()
@@ -70,7 +70,7 @@ public class SingletonHero {
 
   public void useConsumable()
   {
-    //TODO
+    //TODO add stat change and call somewhere
   }
 
   public String getSpell()
@@ -90,4 +90,10 @@ public class SingletonHero {
   public void setJob(Job job) {
     this.job = job;
   }
+
+  public void putEquipment(Equipment equipment) {
+    int statId = equipment.getStat_id();
+    attributes[statId] += equipment.getBonus();
+  }
+
 }

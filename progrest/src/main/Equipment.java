@@ -17,6 +17,14 @@ public class Equipment extends Sellable {
         return class_restriction;
     }
 
+    public int getStat_id() {
+        return stat_id;
+    }
+
+    public int getBonus() {
+        return bonus;
+    }
+
     @Override
     public void print() {
         System.out.println("--------------------");

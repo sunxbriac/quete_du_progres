@@ -82,7 +82,6 @@ public class Inventory {
     current_list.removeAll(to_remove);
     to_remove.clear();
 
-    //TODO consumables are not sold for the moment
     return money_won;
   }
 
@@ -96,11 +95,19 @@ public class Inventory {
     return spells.get(new Random().nextInt(spells.size()));
   }
 
+
   public void addItem(Sellable s){
     if(s instanceof Spell)
       sellables.get(0).add(s);
-    else if(s instanceof Equipment)
+    else if(s instanceof Equipment){
       sellables.get(1).add(s);
+      Equipment e = (Equipment) s;
+      SingletonHero hero = SingletonHero.getInstance();
+
+      if(hero.isJob(e.getClass_restriction()))
+        hero.putEquipment(e);
+    }
+
     else if(s instanceof Consumable)
       sellables.get(2).add(s);
   }
