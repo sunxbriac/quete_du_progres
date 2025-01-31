@@ -6,8 +6,12 @@ public class SingletonStory {
     private Act act;
 
     public static SingletonStory getInstance(){
-        if(instance==null)
-            instance = new SingletonStory();
+        if(instance == null){
+            synchronized (SingletonStory.class){
+                if(instance==null)
+                    instance = new SingletonStory();
+            }
+        }
         return instance;
     }
 

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class SingletonHero {
-  static private SingletonHero instance;
+  private static volatile SingletonHero instance;
   private int level;
   private int[] attributes;
   private Inventory inventory;
@@ -22,10 +22,16 @@ public class SingletonHero {
     }
   }
 
-  static public SingletonHero getInstance()
+  public static SingletonHero getInstance()
   {
-    if(instance == null)
-      instance = new SingletonHero();
+    if(instance == null){
+      synchronized (SingletonHero.class){
+        if(instance==null)
+          instance = new SingletonHero();
+      }
+
+    }
+
     return instance;  
   }
 
