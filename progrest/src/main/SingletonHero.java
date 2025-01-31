@@ -40,6 +40,10 @@ public class SingletonHero {
     return instance;  
   }
 
+  public void print(){
+    //TODO
+  }
+
   public void levelUp()
   {
     level++;

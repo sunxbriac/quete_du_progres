@@ -28,6 +28,14 @@ public class Act {
 
         for(Event e : events){
             e.resolveEvent();
+
+            while (SingletonStory.isPaused) {
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException ex) {
+                    Thread.currentThread().interrupt();
+                }
+            }
         }
 
         Printer.slow_print("End of Act " + act_id,1);

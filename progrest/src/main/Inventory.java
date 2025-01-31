@@ -14,6 +14,10 @@ public class Inventory {
     sellables.add(new ArrayList<>()); //consommables
   }
 
+  public void print(){
+    //TODO
+  }
+
   public int sellItems()
   {
     int money_won = 0;
