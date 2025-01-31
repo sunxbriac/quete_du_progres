@@ -40,7 +40,14 @@ public class SingletonHero {
   }
 
   public void printHero(){
-    //TODO print level, class, attributes
+    System.out.println("Class: " + job);
+    System.out.println("Level: " + level);
+
+    for (int i = 0; i < attributes.length; i++) {
+      System.out.println(TypeAttribute.values()[i] + ": " + attributes[i]);
+    }
+
+
   }
 
   public void levelUp()

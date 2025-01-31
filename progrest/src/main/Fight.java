@@ -42,6 +42,7 @@ public class Fight implements Event{
             if (Math.random() <= 0.7) {
                 Sellable s = factorySellable.generateSellable(SingletonStory.getInstance().getAct_number());
                 System.out.println("You found a " + s.toString() + " on his body");
+                SingletonHero.getInstance().getInventory().addItem(s);
             }
         }
     }

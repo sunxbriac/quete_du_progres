@@ -15,17 +15,37 @@ public class Inventory {
   }
 
   public void print(){
-    System.out.println("List of equipments");
-    for(Sellable s : sellables.get(1))
-      s.print();
+    ArrayList<Sellable> current = sellables.get(1);
+    if(!current.isEmpty()){
+      System.out.println("List of equipments");
+      for(Sellable s : current)
+        s.print();
+    }
+    else
+      System.out.println("You have no equipments for the moment");
 
-    System.out.println("List of spells owned");
-    for(Sellable s : sellables.get(0))
-      s.print();
+    current = sellables.get(0);
+    if(!current.isEmpty()){
+      System.out.println("List of spells owned");
+      for(Sellable s : current)
+        s.print();
+    }
+    else
+      System.out.println("You have no spells for the moment");
 
-    System.out.println("List of consumables owned");
-    for(Sellable s : sellables.get(2))
-      s.print();
+    current = sellables.get(2);
+    if(!current.isEmpty()){
+      System.out.println("List of consumables owned");
+      for(Sellable s : current)
+        s.print();
+    }
+    else
+      System.out.println("You have no consumables for the moment");
+
+
+
+
+
   }
 
   public int sellItems()
@@ -73,5 +93,14 @@ public class Inventory {
   public Sellable getSpell() {
     ArrayList<Sellable> spells = sellables.get(0);
     return spells.get(new Random().nextInt(spells.size()));
+  }
+
+  public void addItem(Sellable s){
+    if(s instanceof Spell)
+      sellables.get(0).add(s);
+    else if(s instanceof Equipment)
+      sellables.get(1).add(s);
+    else if(s instanceof Consumable)
+      sellables.get(2).add(s);
   }
 }

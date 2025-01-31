@@ -120,7 +120,7 @@ public class SingletonStory {
         System.out.println("- 'stop' : Stop the game to go outside and do something else (call after resume only) ");
         System.out.println("- 'pause : Pause the game at the end of the current event");
         System.out.println("- 'hero' : To display information on your hero");
-        System.out.println("- 'hero' : To display all of your inventory");
+        System.out.println("- 'inventory' : To display all of your inventory");
         System.out.println("- 'resume' : Resume the game");
     }
 
