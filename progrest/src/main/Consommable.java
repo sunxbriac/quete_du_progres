@@ -17,4 +17,9 @@ public class Consommable extends Sellable{
         this.name = name;
         this.value = value;
     }
+
+    @Override
+    public void print() {
+        //TODO
+    }
 }

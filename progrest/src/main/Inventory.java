@@ -15,7 +15,11 @@ public class Inventory {
   }
 
   public void print(){
-    //TODO
+    System.out.println("List of equipments");
+    for(Sellable s : sellables.get(1))
+      s.print();
+    System.out.println("List of spells owned");
+
   }
 
   public int sellItems()

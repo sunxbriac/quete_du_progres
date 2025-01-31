@@ -16,4 +16,9 @@ public class Equipement extends Sellable {
     public Job getClass_restriction(){
         return class_restriction;
     }
+
+    @Override
+    public void print() {
+        //TODO
+    }
 }

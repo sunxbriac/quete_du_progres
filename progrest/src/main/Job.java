@@ -2,8 +2,8 @@ package main;
 
 public enum Job {
   PALADIN,
-  GUERRIER,
+  WARRIOR,
   MAGE,
-  VOLEUR,
-  TRAPPEUR;
+  THIEF,
+  TRAPPER;
 }

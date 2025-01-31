@@ -13,4 +13,6 @@ public abstract class Sellable {
     {
         return name;
     }
+
+    public abstract void print();
 }

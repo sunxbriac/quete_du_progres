@@ -24,7 +24,6 @@ public class SingletonHero {
     inventory = new Inventory();
     level=1;
     buffs = new ArrayList<>();
-    job = Job.PALADIN; //TODO
   }
 
   public static SingletonHero getInstance()
@@ -40,8 +39,12 @@ public class SingletonHero {
     return instance;  
   }
 
-  public void print(){
-    //TODO
+  public void printHero(){
+    //TODO print level, class, attributes
+  }
+
+  public void printInventory(){
+    inventory.print();
   }
 
   public void levelUp()
@@ -79,5 +82,9 @@ public class SingletonHero {
 
   public boolean isJob(Job j){
     return j==job;
+  }
+
+  public void setJob(Job job) {
+    this.job = job;
   }
 }

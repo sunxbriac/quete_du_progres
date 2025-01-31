@@ -34,7 +34,8 @@ public class SingletonStory {
     public void start_game(){
         System.out.println("Welcome in progrest quest (not the real one though)");
         System.out.println("Type \"pause\" at any moment to pause the game");
-        //TODO choix de classe et autres
+
+        setJobByUser();
 
         play();
     }
@@ -126,5 +127,28 @@ public class SingletonStory {
         if (gameThread != null) {
             gameThread.interrupt();
         }
+    }
+
+    private void setJobByUser(){
+        Scanner scanner = new Scanner(System.in);
+        Job job = null;
+
+        while(job==null){
+            System.out.println("Enter your job (Paladin, Warrior, Mage, Thief, Trapper): ");
+            String input = scanner.nextLine().toUpperCase(); // Convert to upper case to match enum values
+
+
+
+            try {
+                job = Job.valueOf(input);
+                System.out.println("Your selected class is: " + job);
+            } catch (IllegalArgumentException e) {
+                System.out.println("Invalid class selected. Please choose one of the following: (Paladin, Warrior, Mage, Thief, Trapper)");
+            }
+        }
+
+        SingletonHero.getInstance().setJob(job);
+
+        scanner.close();
     }
 }
