@@ -1,16 +1,16 @@
 package main;
 
-public class Consommable extends Sellable{
-    private int bonus;
+public class Consumables extends Sellable{
+    private final int bonus;
     private int number_of_use;
-    private int stat_id;
+    private final int stat_id;
 
     public boolean use(){
         number_of_use--;
         return number_of_use<=0;
     }
 
-    public Consommable(int stat_id, int number_of_use, int bonus, String name, int value) {
+    public Consumables(int stat_id, int number_of_use, int bonus, String name, int value) {
         this.stat_id = stat_id;
         this.number_of_use = number_of_use;
         this.bonus = bonus;

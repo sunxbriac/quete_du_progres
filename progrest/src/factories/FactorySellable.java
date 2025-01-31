@@ -14,15 +14,15 @@ public class FactorySellable {
 
         switch(ThreadLocalRandom.current().nextInt(0, 5)){
             case 0:
-                result = generateConsommable(act_id, value);
+                result = generateConsommable(value);
                 break;
             case 1:
-                result = generateSpell(act_id, value);
+                result = generateSpell(value);
                 break;
             default:
-                result = generateEquipement(act_id, value);
+                result = generateEquipement(value);
                 break;
-        };
+        }
 
         return result;
     }
@@ -31,23 +31,23 @@ public class FactorySellable {
         return 0; //TODO
     }
 
-    public Equipement generateEquipement(int act_id, int val){
+    public Equipment generateEquipement(int val){
         int stat_id = 0; //TODO
         Job class_rest = getRandomJob();
         int bonus = 1; //TODO
-        return new Equipement(stat_id, class_rest, bonus, Reader.getStringEquipement(), val);
+        return new Equipment(stat_id, class_rest, bonus, Reader.getStringEquipment(), val);
     }
 
-    public Spell generateSpell(int act_id, int val){
+    public Spell generateSpell(int val){
         Job class_rest = getRandomJob();
         return new Spell(class_rest, Reader.getStringSpell(), val);
     }
 
-    public Consommable generateConsommable(int act_id, int val){
+    public Consumables generateConsommable(int val){
         int stat_id = 0; //TODO
         int number_of_use = 1; //TODO
         int bonus = 1; //TODO
-        return new Consommable(stat_id, number_of_use, bonus, Reader.getStringConsommable(), val);
+        return new Consumables(stat_id, number_of_use, bonus, Reader.getStringConsommable(), val);
     }
 
     private static Job getRandomJob() {

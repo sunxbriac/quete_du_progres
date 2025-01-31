@@ -45,7 +45,7 @@ public class Inventory {
     //we sell only equipement that the hero can't use either
     current_list = sellables.get(1);
     for(Sellable s : current_list){
-      Equipement eq = (Equipement) s;
+      Equipment eq = (Equipment) s;
       if(!hero.isJob(eq.getClass_restriction())){
         money_won += eq.value;
         sellItem(eq);

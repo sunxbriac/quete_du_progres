@@ -22,7 +22,7 @@ public class FactoryEvent {
             default:
                 result = new Fight(calculateNumberOfMonsters(act_id), Reader.getStringLocation());
                 break;
-        };
+        }
 
         return result;
     }

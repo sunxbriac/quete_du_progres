@@ -1,7 +1,7 @@
 package main;
 
 public class Spell extends Sellable{
-    private Job class_restriction;
+    private final Job class_restriction;
 
     public Spell(Job class_restriction, String name, int value) {
         this.class_restriction = class_restriction;

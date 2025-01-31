@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Act {
-    private int act_id;
-    private ArrayList<Event> events;
+    private final int act_id;
+    private final ArrayList<Event> events;
 
     public Act(int act_id){
         this.act_id = act_id;

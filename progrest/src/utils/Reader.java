@@ -10,18 +10,18 @@ public abstract class Reader {
     private static final String merchants_file = directory+"merchants.txt";
     private static final String monsters_file = directory+"monsters.txt";
     private static final String locations_file = directory+"locations.txt";
-    private static final String equipements_file = directory+"equipements.txt";
-    private static final String consommables_file = directory+"consommables.txt";
+    private static final String equipments_file = directory+"equipments.txt";
+    private static final String consumables_file = directory+"consumables.txt";
     private static final String spells_file = directory+"spells.txt";
     private static final String events_file = directory+"events.txt";
     private static final String synonyms_file = directory+"killing_synonyms.txt";
 
-    public static String getStringEquipement() {
-        return getLineInFile(equipements_file);
-    };
+    public static String getStringEquipment() {
+        return getLineInFile(equipments_file);
+    }
 
     public static String getStringConsommable(){
-        return getLineInFile(consommables_file);
+        return getLineInFile(consumables_file);
     }
 
     public static String getStringSpell(){
@@ -61,7 +61,7 @@ public abstract class Reader {
             }
         }
         catch(Exception e){
-            e.printStackTrace();
+            System.out.printf("Error while reading file : " + file_input);
         }
 
         if (lineCount == 0) {
