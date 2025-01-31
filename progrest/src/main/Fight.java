@@ -39,7 +39,7 @@ public class Fight implements Event{
 
         for(Monster m : monsters){
             Printer.slow_print(m.getHow_to_kill() + " a " + m.getName(), ThreadLocalRandom.current().nextInt(3, 11));
-            if (Math.random() <= 0.2) {
+            if (Math.random() <= 0.7) {
                 Sellable s = factorySellable.generateSellable(SingletonStory.getInstance().getAct_number());
                 System.out.println("You found a " + s.toString() + " on his body");
             }

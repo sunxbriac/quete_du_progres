@@ -30,14 +30,15 @@ public class SingletonStory {
     }
 
     public void start_game(){
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome in progress quest (not the real one though)");
         System.out.println("Type \"pause\" at any moment to pause the game");
 
-        setJobByUser();
+        setJobByUser(scanner);
 
-        play();
+        play(scanner);
     }
-    public void play(){
+    public void play(Scanner scanner){
 
         gameThread = new Thread(() -> {
             while (isGameRunning) {
@@ -59,11 +60,8 @@ public class SingletonStory {
         gameThread.start();
 
         // Listen for user input to pause the game
-        Scanner scanner = new Scanner(System.in);
+
         while (isGameRunning) {
-            if (!scanner.hasNextLine()) {
-                break;
-            }
 
             String input = scanner.nextLine();
             if ("pause".equalsIgnoreCase(input)) {
@@ -102,6 +100,7 @@ public class SingletonStory {
                     break;
                 case "hero":
                     SingletonHero.getInstance().printHero();
+                    break;
                 default:
                     System.out.println("Unknown command. Type 'help' for options.");
                     break;
@@ -120,6 +119,8 @@ public class SingletonStory {
         System.out.println("- 'help' : Show this help message");
         System.out.println("- 'stop' : Stop the game to go outside and do something else (call after resume only) ");
         System.out.println("- 'pause : Pause the game at the end of the current event");
+        System.out.println("- 'hero' : To display information on your hero");
+        System.out.println("- 'hero' : To display all of your inventory");
         System.out.println("- 'resume' : Resume the game");
     }
 
@@ -132,8 +133,7 @@ public class SingletonStory {
         }
     }
 
-    private void setJobByUser(){
-        Scanner scanner = new Scanner(System.in);
+    private void setJobByUser(Scanner scanner){
         Job job = null;
 
         while(job==null){
@@ -152,7 +152,6 @@ public class SingletonStory {
 
         SingletonHero.getInstance().setJob(job);
 
-        scanner.close();
     }
 
     public int getAct_number() {

@@ -18,8 +18,14 @@ public class Inventory {
     System.out.println("List of equipments");
     for(Sellable s : sellables.get(1))
       s.print();
-    System.out.println("List of spells owned");
 
+    System.out.println("List of spells owned");
+    for(Sellable s : sellables.get(0))
+      s.print();
+
+    System.out.println("List of consumables owned");
+    for(Sellable s : sellables.get(2))
+      s.print();
   }
 
   public int sellItems()

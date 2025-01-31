@@ -14,13 +14,13 @@ public class FactorySellable {
 
         switch(ThreadLocalRandom.current().nextInt(0, 5)){
             case 0:
-                result = generateConsommable(value);
+                result = generateConsumable(value);
                 break;
             case 1:
                 result = generateSpell(value);
                 break;
             default:
-                result = generateEquipement(value);
+                result = generateEquipment(value);
                 break;
         }
 
@@ -34,7 +34,7 @@ public class FactorySellable {
         return baseValue + randomFactor;
     }
 
-    public Equipment generateEquipement(int val){
+    public Equipment generateEquipment(int val){
         int stat_id = 0; //TODO
         Job class_rest = getRandomJob();
         int bonus = 1; //TODO
@@ -46,7 +46,7 @@ public class FactorySellable {
         return new Spell(class_rest, Reader.getStringSpell(), val);
     }
 
-    public Consumable generateConsommable(int val){
+    public Consumable generateConsumable(int val){
         int stat_id = 0; //TODO
         int number_of_use = 1; //TODO
         int bonus = 1; //TODO
