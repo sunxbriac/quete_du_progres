@@ -19,6 +19,17 @@ public class Equipment extends Sellable {
 
     @Override
     public void print() {
-        //TODO
+        System.out.println("--------------------");
+
+        System.out.println("Name: " + name);
+        System.out.println("Value: " + value + "g");
+        System.out.println("Class Restriction: " + class_restriction);
+
+        TypeAttribute statType = TypeAttribute.values()[stat_id];
+        System.out.println("Attribute: " + statType);
+
+        System.out.println("Bonus: " + bonus);
+
+        System.out.println("--------------------");
     }
 }

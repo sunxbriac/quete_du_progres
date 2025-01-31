@@ -22,6 +22,17 @@ public class Consumable extends Sellable{
 
     @Override
     public void print() {
-        //TODO
+        System.out.println("--------------------");
+
+        System.out.println("Name: " + name);
+        System.out.println("Value: " + value + "g");
+
+        TypeAttribute statType = TypeAttribute.values()[stat_id];
+        System.out.println("Attribute: " + statType);
+
+        System.out.println("Bonus: " + bonus);
+        System.out.println("Number of uses left: " + number_of_use);
+
+        System.out.println("--------------------");
     }
 }

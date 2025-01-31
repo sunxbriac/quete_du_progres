@@ -15,6 +15,7 @@ public class Inventory {
   }
 
   public void print(){
+    System.out.println("You currently have " + gold + " gold");
     ArrayList<Sellable> current = sellables.get(1);
     if(!current.isEmpty()){
       System.out.println("List of equipments");

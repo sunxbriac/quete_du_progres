@@ -15,6 +15,12 @@ public class Spell extends Sellable{
 
     @Override
     public void print() {
-        //TODO
+        System.out.println("--------------------");
+
+        System.out.println("Name: " + name);
+        System.out.println("Value: " + value + "g");
+        System.out.println("Class Restriction: " + class_restriction);
+
+        System.out.println("--------------------");
     }
 }
