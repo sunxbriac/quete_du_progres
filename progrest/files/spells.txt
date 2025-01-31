@@ -1,0 +1,40 @@
+Fireball  
+Lightning Bolt  
+Ice Spike  
+Arcane Missile  
+Healing Light  
+Shadow Grasp  
+Flame Wave  
+Chain Lightning  
+Frost Nova  
+Meteor Shower  
+Divine Shield  
+Curse of Weakness  
+Teleportation  
+Blink  
+Summon Golem  
+Summon Skeletons  
+Mana Drain  
+Mind Control  
+Invisibility  
+Phantom Step  
+Holy Smite  
+Dark Pact  
+Wind Slash  
+Earthquake  
+Tornado  
+Water Surge  
+Bloodletting Hex  
+Time Warp  
+Astral Projection  
+Spectral Chains  
+Eldritch Blast  
+Poison Cloud  
+Gravity Well  
+Shield of Thorns  
+Spirit Link  
+Soul Drain  
+Runic Barrier  
+Mirror Image  
+Pyroclasm  
+Frozen Prison  

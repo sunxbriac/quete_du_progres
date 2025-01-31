@@ -1,0 +1,31 @@
+Iron Sword  
+Steel Dagger  
+Elven Longbow  
+Runed Staff  
+Shadowfang Dagger  
+Dwarven Warhammer  
+Enchanted Shield  
+Crystal Gauntlets  
+Infernal Greataxe  
+Holy Mace  
+Obsidian Plate Armor  
+Dragonhide Cloak  
+Boots of Swiftness  
+Helm of the Forgotten King  
+Amulet of Eternal Night  
+Ring of Arcane Power  
+Gloves of Thievery  
+Cursed Blade of the Void  
+Silver Lance  
+Stormcaller Wand  
+Phoenix Feather Robe  
+Titan’s Gauntlets  
+Witch’s Grimoire  
+Necromancer’s Bone Staff  
+Thunderforged Helm  
+Venomfang Daggers  
+Spectral Chainmail  
+Basilisk Scale Shield  
+Bloodstained Greaves  
+Sash of the Windwalker  
+Orb of Forbidden Knowledge  

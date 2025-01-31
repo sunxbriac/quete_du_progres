@@ -1,0 +1,39 @@
+Goblin
+Orc
+Troll
+Dragon
+Lich
+Vampire
+Werewolf
+Gargoyle
+Hydra
+Chimera
+Minotaur
+Basilisk
+Kraken
+Manticore
+Wraith
+Specter
+Zombie
+Skeleton Warrior
+Dark Elf
+Shadow Fiend
+Beholder
+Doppelgänger
+Slime
+Golem
+Djinn
+Harpy
+Banshee
+Wyvern
+Naga
+Hellhound
+Phantom Knight
+Succubus
+Cockatrice
+Mothman
+Frost Giant
+Sand Wurm
+Cave Bat
+Swamp Thing
+Demon Lord

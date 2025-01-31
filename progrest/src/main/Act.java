@@ -1,6 +1,7 @@
 package main;
 
 import factories.FactoryEvent;
+import utils.Printer;
 
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
@@ -22,7 +23,7 @@ public class Act {
     }
 
     public void solveEvents(){
-        System.out.println("Start of Act " + act_id);
+        Printer.slow_print("Start of Act " + act_id,1);
 
         for(Event e : events){
             e.resolveEvent();

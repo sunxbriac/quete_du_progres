@@ -1,0 +1,30 @@
+Health Potion  
+Mana Potion  
+Stamina Elixir  
+Elixir of Strength  
+Elixir of Dexterity  
+Elixir of Wisdom  
+Greater Healing Potion  
+Lesser Mana Tonic  
+Phoenix Feather  
+Antidote  
+Invisibility Brew  
+Scroll of Teleportation  
+Scroll of Fireball  
+Scroll of Lightning Bolt  
+Scroll of Ice Spike  
+Draught of the Berserker  
+Draught of the Mystic  
+Herbal Remedy  
+Mystic Salve  
+Potion of Night Vision  
+Potion of Poison Resistance  
+Potion of Magic Reflection  
+Potion of Giant’s Might  
+Potion of Haste  
+Potion of Water Breathing  
+Vial of Dragon’s Blood  
+Flask of Eternal Youth  
+Goblin Energy Drink  
+Banshee’s Whisper Tonic  
+Necromancer’s Elixir  

@@ -11,6 +11,7 @@ public abstract class Printer {
                 Thread.currentThread().interrupt();
             }
         }
+        System.out.println();
 
     }
 }

@@ -5,13 +5,15 @@ import java.io.FileReader;
 import java.util.Random;
 
 public abstract class Reader {
-    private static final String merchants_file = "merchants.txt";
-    private static final String monsters_file = "monsters.txt";
-    private static final String locations_file = "locations.txt";
-    private static final String equipements_file = "equipements.txt";
-    private static final String consommables_file = "consommables.txt";
-    private static final String spells_file = "spells.txt";
-    private static final String events_file = "events.txt";
+    private static final String directory = "";
+
+    private static final String merchants_file = directory+"merchants.txt";
+    private static final String monsters_file = directory+"monsters.txt";
+    private static final String locations_file = directory+"locations.txt";
+    private static final String equipements_file = directory+"equipements.txt";
+    private static final String consommables_file = directory+"consommables.txt";
+    private static final String spells_file = directory+"spells.txt";
+    private static final String events_file = directory+"events.txt";
 
     public static String getStringEquipement() {
         return getLineInFile(equipements_file);
