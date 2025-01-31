@@ -27,8 +27,11 @@ public class FactorySellable {
         return result;
     }
 
-    private int calculateValue(int act_id){
-        return 0; //TODO
+    private int calculateValue(int act_id) {
+        int baseValue = (int) (50 * Math.log(1 + act_id) * 10);
+        int randomFactor = (int) (Math.random() * baseValue * 0.4) - (int) (baseValue * 0.2);
+
+        return baseValue + randomFactor;
     }
 
     public Equipment generateEquipement(int val){
@@ -43,11 +46,11 @@ public class FactorySellable {
         return new Spell(class_rest, Reader.getStringSpell(), val);
     }
 
-    public Consumables generateConsommable(int val){
+    public Consumable generateConsommable(int val){
         int stat_id = 0; //TODO
         int number_of_use = 1; //TODO
         int bonus = 1; //TODO
-        return new Consumables(stat_id, number_of_use, bonus, Reader.getStringConsumable(), val);
+        return new Consumable(stat_id, number_of_use, bonus, Reader.getStringConsumable(), val);
     }
 
     private static Job getRandomJob() {

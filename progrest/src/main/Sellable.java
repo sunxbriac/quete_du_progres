@@ -14,5 +14,10 @@ public abstract class Sellable {
         return name;
     }
 
+    @Override
+    public String toString() {
+        return name;
+    }
+
     public abstract void print();
 }

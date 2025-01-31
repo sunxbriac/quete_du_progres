@@ -1,6 +1,7 @@
 package main;
 
 import factories.FactoryMonster;
+import factories.FactorySellable;
 import utils.Printer;
 
 import java.util.ArrayList;
@@ -34,8 +35,14 @@ public class Fight implements Event{
 
 
     private void fightMonsters(){
+        FactorySellable factorySellable = new FactorySellable();
+
         for(Monster m : monsters){
             Printer.slow_print(m.getHow_to_kill() + " a " + m.getName(), ThreadLocalRandom.current().nextInt(3, 11));
+            if (Math.random() <= 0.2) {
+                Sellable s = factorySellable.generateSellable(SingletonStory.getInstance().getAct_number());
+                System.out.println("You found a " + s.toString() + " on his body");
+            }
         }
     }
 }

@@ -97,6 +97,11 @@ public class SingletonStory {
                     isPaused = false;
                     System.out.println("Game resumed.");
                     break;
+                case "inventory":
+                    SingletonHero.getInstance().getInventory().print();
+                    break;
+                case "hero":
+                    SingletonHero.getInstance().printHero();
                 default:
                     System.out.println("Unknown command. Type 'help' for options.");
                     break;
@@ -148,5 +153,9 @@ public class SingletonStory {
         SingletonHero.getInstance().setJob(job);
 
         scanner.close();
+    }
+
+    public int getAct_number() {
+        return act_number;
     }
 }

@@ -43,10 +43,6 @@ public class SingletonHero {
     //TODO print level, class, attributes
   }
 
-  public void printInventory(){
-    inventory.print();
-  }
-
   public void levelUp()
   {
     level++;
