@@ -1,7 +1,5 @@
 package main;
 
-import utils.Printer;
-
 import java.util.Scanner;
 
 public class SingletonStory {
@@ -32,7 +30,7 @@ public class SingletonStory {
     }
 
     public void start_game(){
-        System.out.println("Welcome in progrest quest (not the real one though)");
+        System.out.println("Welcome in progress quest (not the real one though)");
         System.out.println("Type \"pause\" at any moment to pause the game");
 
         setJobByUser();

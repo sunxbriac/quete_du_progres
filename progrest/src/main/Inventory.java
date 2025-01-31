@@ -10,8 +10,8 @@ public class Inventory {
   public Inventory(){
     sellables = new ArrayList<>();
     sellables.add(new ArrayList<>()); //spells
-    sellables.add(new ArrayList<>()); //equipements
-    sellables.add(new ArrayList<>()); //consommables
+    sellables.add(new ArrayList<>()); //equipments
+    sellables.add(new ArrayList<>()); //consumables
   }
 
   public void print(){
@@ -33,7 +33,7 @@ public class Inventory {
     //we sell only spells that the hero can't use
     for(Sellable s : current_list){
       Spell sp = (Spell) s;
-      if(!hero.isJob(sp.getClass_restriction())){
+      if(hero.isJob(sp.getClass_restriction())){
         money_won += sp.value;
         sellItem(sp);
         to_remove.add(sp);
@@ -42,11 +42,11 @@ public class Inventory {
     current_list.removeAll(to_remove);
     to_remove.clear();
 
-    //we sell only equipement that the hero can't use either
+    //we sell only equipment that the hero can't use either
     current_list = sellables.get(1);
     for(Sellable s : current_list){
       Equipment eq = (Equipment) s;
-      if(!hero.isJob(eq.getClass_restriction())){
+      if(hero.isJob(eq.getClass_restriction())){
         money_won += eq.value;
         sellItem(eq);
         to_remove.add(eq);
@@ -55,7 +55,7 @@ public class Inventory {
     current_list.removeAll(to_remove);
     to_remove.clear();
 
-    //TODO consommable are not sold for the moment
+    //TODO consumables are not sold for the moment
     return money_won;
   }
 

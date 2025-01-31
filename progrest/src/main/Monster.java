@@ -1,18 +1,17 @@
 package main;
 
-import java.util.List;
 
 public class Monster{
-    private String nom;
-    private String how_to_kill;
+    private final String name;
+    private final String how_to_kill;
 
     public Monster(String name, String how_to_kill){
-        nom=name;
+        this.name =name;
         this.how_to_kill=how_to_kill;
     }
 
-    public String getNom() {
-        return nom;
+    public String getName() {
+        return name;
     }
 
     public String getHow_to_kill() {

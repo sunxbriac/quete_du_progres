@@ -4,12 +4,11 @@ import factories.FactoryMonster;
 import utils.Printer;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Fight implements Event{
     private ArrayList<Monster> monsters;
-    private String location;
+    private final String location;
 
     public Fight(int number_of_monsters, String location){
         monsters = new ArrayList<>();
@@ -36,7 +35,7 @@ public class Fight implements Event{
 
     private void fightMonsters(){
         for(Monster m : monsters){
-            Printer.slow_print(m.getHow_to_kill() + " a " + m.getNom(), ThreadLocalRandom.current().nextInt(3, 11));
+            Printer.slow_print(m.getHow_to_kill() + " a " + m.getName(), ThreadLocalRandom.current().nextInt(3, 11));
         }
     }
 }

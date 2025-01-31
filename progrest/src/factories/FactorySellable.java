@@ -47,7 +47,7 @@ public class FactorySellable {
         int stat_id = 0; //TODO
         int number_of_use = 1; //TODO
         int bonus = 1; //TODO
-        return new Consumables(stat_id, number_of_use, bonus, Reader.getStringConsommable(), val);
+        return new Consumables(stat_id, number_of_use, bonus, Reader.getStringConsumable(), val);
     }
 
     private static Job getRandomJob() {

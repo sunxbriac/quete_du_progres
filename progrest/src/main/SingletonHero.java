@@ -65,7 +65,7 @@ public class SingletonHero {
     buffs.removeAll(to_remove);
   }
 
-  public void useConsommable()
+  public void useConsumable()
   {
     //TODO
   }
@@ -81,7 +81,7 @@ public class SingletonHero {
   }
 
   public boolean isJob(Job j){
-    return j==job;
+    return j != job;
   }
 
   public void setJob(Job job) {

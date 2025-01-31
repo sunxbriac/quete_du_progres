@@ -20,7 +20,7 @@ public abstract class Reader {
         return getLineInFile(equipments_file);
     }
 
-    public static String getStringConsommable(){
+    public static String getStringConsumable(){
         return getLineInFile(consumables_file);
     }
 

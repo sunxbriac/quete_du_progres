@@ -1,8 +1,6 @@
 package main;
 
 import utils.Printer;
-
-import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Misc implements Event{
