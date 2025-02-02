@@ -28,6 +28,13 @@ public class Act {
 
         for(Event e : events){
             e.resolveEvent();
+            SingletonHero.getInstance().updateBuffs();
+
+            int randomValue = ThreadLocalRandom.current().nextInt(10); // consume something every 10 events randomly
+
+            if (randomValue == 0) {
+                SingletonHero.getInstance().useConsumable();
+            }
 
             while (SingletonStory.isPaused) {
                 try {

@@ -18,7 +18,17 @@ public class Consumable extends Sellable{
         this.value = value;
     }
 
+    public int getStat_id() {
+        return stat_id;
+    }
 
+    public int getBonus() {
+        return bonus;
+    }
+
+    public int getNumber_of_use() {
+        return number_of_use;
+    }
 
     @Override
     public void print() {

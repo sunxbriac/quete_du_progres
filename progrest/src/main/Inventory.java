@@ -43,10 +43,6 @@ public class Inventory {
     else
       System.out.println("You have no consumables for the moment");
 
-
-
-
-
   }
 
   public int sellItems()
@@ -91,8 +87,21 @@ public class Inventory {
   }
 
   public Sellable getSpell() {
+    if(sellables.get(0).isEmpty())
+      return null;
     ArrayList<Sellable> spells = sellables.get(0);
     return spells.get(new Random().nextInt(spells.size()));
+  }
+
+  public Sellable getConsumable() {
+    if(sellables.get(2).isEmpty())
+      return null;
+    ArrayList<Sellable> consumables = sellables.get(2);
+    return consumables.get(new Random().nextInt(consumables.size()));
+  }
+
+  public void removeConsumable(Consumable c){
+    sellables.get(2).remove(c);
   }
 
 
@@ -110,5 +119,15 @@ public class Inventory {
 
     else if(s instanceof Consumable)
       sellables.get(2).add(s);
+  }
+
+  public int getGold() {
+    return gold;
+  }
+
+  public void buyItem(Sellable s){
+    //checked before call if hero has enough money
+    this.gold -= s.getValue();
+    addItem(s);
   }
 }

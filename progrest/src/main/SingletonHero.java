@@ -1,5 +1,7 @@
 package main;
 
+import utils.Printer;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -53,16 +55,34 @@ public class SingletonHero {
   public void levelUp()
   {
     level++;
-    //TODO change stats, add call at the end of fight event ?
+    Printer.slow_print("You gained a level !", 1);
+    for (int i = 0; i < attributes.length; i++) {
+      int randomAddition = (int) (Math.random() * 3);
+      attributes[i] += randomAddition;
+    }
   }
 
   public void updateBuffs()
   {
-    //TODO change stats accordingly
     ArrayList<Buff> to_remove = new ArrayList<>();
     for(Buff b : buffs){
       if(b.changeDuration()){
         to_remove.add(b);
+        Sellable source = b.getSource();
+        int stat_id = 0;
+        int bonus = 0;
+        if(source instanceof Consumable){
+          Consumable cons = (Consumable) source;
+          stat_id = cons.getStat_id();
+          bonus = cons.getBonus();
+        }
+        else if(source instanceof Equipment){
+          Equipment eq = (Equipment) source;
+          stat_id = eq.getStat_id();
+          bonus = eq.getBonus();
+        }
+
+        attributes[stat_id] -= bonus;
       }
     }
     buffs.removeAll(to_remove);
@@ -70,12 +90,33 @@ public class SingletonHero {
 
   public void useConsumable()
   {
-    //TODO add stat change and call somewhere
+    Sellable c = getInventory().getConsumable();
+    if(c != null){
+      //should be always true
+      if(c instanceof Consumable) {
+        Consumable cons = (Consumable) c;
+        if(cons.use()){
+          //now empty
+          getInventory().removeConsumable(cons);
+        }
+        buffs.add(new Buff((int) (Math.random() * 3)+1, c));
+        attributes[cons.getStat_id()] += cons.getBonus();
+        Printer.slow_print("Consuming " + cons.getName() + " " + cons.getNumber_of_use() + " uses left", 2);
+      }
+    }
+
   }
 
   public String getSpell()
   {
-    return inventory.getSpell().getName();
+    String result;
+    try{
+      result = inventory.getSpell().getName();
+    }
+    catch(NullPointerException e){
+      result = "0";
+    }
+    return result;
   }
 
   public Inventory getInventory()

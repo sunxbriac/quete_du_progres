@@ -25,6 +25,7 @@ public class Fight implements Event{
         printMessage();
         fightMonsters();
         Printer.slow_print("Leaving " + location + " safely", 2);
+        SingletonHero.getInstance().levelUp();
     }
 
     @Override
@@ -39,7 +40,11 @@ public class Fight implements Event{
 
         for(Monster m : monsters){
             Printer.slow_print(m.getHow_to_kill() + " a " + m.getName(), ThreadLocalRandom.current().nextInt(3, 11));
-            if (Math.random() <= 0.7) {
+            String spell = SingletonHero.getInstance().getSpell();
+            if (Math.random() <= 0.1 && !spell.matches("0")){
+                Printer.slow_print("Using " + spell + " while battling " + m.getName(), 3);
+            }
+            if (Math.random() <= 0.4) {
                 Sellable s = factorySellable.generateSellable(SingletonStory.getInstance().getAct_number());
                 System.out.println("You found a " + s.toString() + " on his body");
                 SingletonHero.getInstance().getInventory().addItem(s);

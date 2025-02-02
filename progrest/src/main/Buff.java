@@ -13,4 +13,8 @@ public class Buff {
         this.duration = duration;
         this.source = source;
     }
+
+    public Sellable getSource() {
+        return source;
+    }
 }

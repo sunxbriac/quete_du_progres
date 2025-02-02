@@ -14,7 +14,7 @@ public class FactoryEvent {
         Event result;
         switch(ThreadLocalRandom.current().nextInt(0, 6)){
             case 0:
-                result = new MerchantEncounter(Reader.getStringMerchant(), Reader.getStringLocation());
+                result = new MerchantEncounter(Reader.getStringMerchant(), Reader.getStringLocation(), act_id);
                 break;
             case 1:
                 result = new Misc(Reader.getStringRandomEvent());

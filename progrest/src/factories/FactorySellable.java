@@ -34,10 +34,17 @@ public class FactorySellable {
         return baseValue + randomFactor;
     }
 
+    private int calculateBonus(int act_id){
+        int baseValue = (int) (10 * Math.log(1 + act_id) * 5);
+        int randomFactor = (int) (Math.random() * baseValue * 0.3) - (int) (baseValue * 0.15);
+
+        return baseValue + randomFactor;
+    }
+
     public Equipment generateEquipment(int act_id, int val){
         int stat_id = getRandomStatId();
         Job class_rest = getRandomJob();
-        int bonus = 1; //TODO change scaling depending on act_id
+        int bonus = calculateBonus(act_id);
         return new Equipment(stat_id, class_rest, bonus, Reader.getStringEquipment(), val);
     }
 
@@ -49,7 +56,7 @@ public class FactorySellable {
     public Consumable generateConsumable(int act_id, int val){
         int stat_id = getRandomStatId();
         int number_of_use = (int) (Math.random() * 5) + 1;
-        int bonus = 1; //TODO change scaling depending on act_id
+        int bonus = calculateBonus(act_id);
         return new Consumable(stat_id, number_of_use, bonus, Reader.getStringConsumable(), val);
     }
 
