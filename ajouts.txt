@@ -1,8 +1,0 @@
-ajout de durabilité dans l'équipement et duration dans les consommables
-modif de stats en array de stats (+facile a manip)
-
-attribut dans singletonhero pour le level du perso
-nb de combats avant prochain lvl 
-+ dans fonction lvl up modif cette valeur en fction du niveau 
-
-peut etre linkedlist arraylist etc
